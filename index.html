@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        #google_translate_element{
+            position: absolute;
+            top: 20px;
+            right: 100px;
+        }
+        .goog-te-gadget-icon{
+            display: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Google Translate</a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Google Translate</h1>
+                <p>Google Translate is a free multilingual machine translation service developed by Google, to translate text. It offers a website interface, a mobile app for Android and iOS, and an API that helps developers build browser extensions and software applications.</p>
+            </div>
+        </div>
+    </div>
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'es,fr,de,bn,it', // Specify the languages you want to show, separated by commas
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE // Choose the layout style
+            }, 'google_translate_element');
+        }
+    </script>
+</body>
+</html>
